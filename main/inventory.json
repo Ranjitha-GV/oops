@@ -1,0 +1,13 @@
+{ "Rice":[{ "name":"basumati", "weight":2, "price":200 },
+    { "name":"brown rice", "weight":3, "price":70 },
+    { "name":"steam rice", "weight":4, "price":68}],
+
+    "Wheat":[{ "name":"Ashirvadh", "weight":5, "price":90},
+        {"name":"philsberry", "weight":5, "price":100},
+        {"name":"patanjali", "weight":5, "price":60}],
+
+        "Pulses":[{"name":"Horse gram", "weight":4, "price":90},
+            {"name":"Red gram", "weight":5, "price":80},
+            {"name":"Green gram", "weight":6, "price":60}]
+
+}
