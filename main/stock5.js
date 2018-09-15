@@ -72,7 +72,7 @@ accountReport()
   }
 }
     var s = new Account();
-    console.log("***************Welcome tostock account manager***************")
+    console.log("***************Welcome to stock account manager***************")
     console.log("1: Buy stock");
     console.log("2: Value of the stock");
     console.log("3: Sell stock");
@@ -80,9 +80,7 @@ accountReport()
     console.log("5: Exit");
     var choice = prompt("Please enter your choice: ");
     var arrayOfObjects,totalPrice=1, amount =0,report=[];
-    // fs.readFile('/home/d/Desktop/labsfirst/oops/main/stock5.json', 'utf-8', function(err,stock){
-    //     if (err) throw err
-    // arrayOfObjects = JSON.parse(stock);
+    
     switch(parseInt(choice))
     {
         case 1:
