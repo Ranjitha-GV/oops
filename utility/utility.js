@@ -169,7 +169,8 @@ indexOf(element)
   // not found
   return -1;
 }
-sortList() {
+sortList() 
+{
 
   var swap;
   var current = this.head;

@@ -1,13 +1,11 @@
-
 var prompt = require('prompt-sync')();
-var utility = require('/home/d/Desktop/labsfirst/oops/utility/utility.js');
-class Account
+var utility = require('/home/d/Desktop/labsfirst/oops/utility/utilityQueue.js');
+
+class Comapany
 {
-    constructor(arrayOfObjects,totalPrice, amount,report)
+    constructor(totalPrice)
     {
         this.totalPrice = 1;
-        this.amount = 0;
-        this.report=[];
     }
 
     buy(num)
@@ -22,43 +20,38 @@ class Account
                 number: number,
                 price: price
             }
-            list.add(customer);
-            totalPrice = parseInt(num) * parseInt(price);
+            queue.enqueue(customer);
+            console.log("a");
+            var totalPrice = parseInt(num) * parseInt(price);
             console.log("The total price of all the stocks is "+totalPrice); 
             var date = new Date();
             var time = date.getHours() +":"+ date.getMinutes() +":"+ date.getSeconds();
             console.log("The purchase time is "+time);
    } 
 }
+
     
-sell(num)
+sell()
 {
+    var num = prompt("Please enter the number of elements you want to purchase: ");
     for(var j=0;j<num;j++)
     {
-    var del = prompt("Please enter the name of item you want to purchase: ");
-    var result = list.indexOf(del);
-    console.log(result);
-    if(result != -1)
-    {
-        list.removeFrom(del);
-    }
+        queue.dequeue();
     }
     var date = new Date();
             var time = date.getHours() +":"+ date.getMinutes() +":"+ date.getSeconds();
-            console.log("The purchase time is "+time);
+            console.log("The item is sold at "+time);
     
 }
 accountReport()
 {
-  list.printList();     
+  queue.printQ();     
   
 }
 }
-    var list = new utility();
-    var s = new Account();
-    var totalPrice=1;
+    var queue = new utility();
+    var d = new Comapany();
     var num = prompt("Please enter the total number of stocks purchased: ");
-                s.buy(num);
-                s.accountReport();
-                s.sell(num);
-                
+                d.buy(num);
+                d.accountReport();
+                d.sell();
